@@ -17,33 +17,18 @@
 
 
 import random
-
+import time
+import webbrowser
 
 assignments={
-"a": [1,11],   
-"b": [1,21],   
-"c": [1,31], 
-"d": [1,11],  
-"e": [1,21], 
-"f": [1,31],   
-"g": [1,11],   
-"h": [1,21],   
-"i": [1,31],   
-"j": [1,11],
-"k": [1,11],      
-"l": [1,11],      
-"m": [1,11],      
-"n": [1,11],            
+
     }
 
 total_amount = int(input("How many total assigments (including tests) would you like to \"grade\"? \n"))
 
 
-
-
 def add_assignment(assignment, done, outof):
     assignments[assignment]=[done,outof]
-
 
 
 def averageit():
@@ -56,6 +41,18 @@ def averageit():
     print("You have " +str(numer) + " points out of " + str(denom) + " points. \n")
     avg=numer*100/denom
     print("Therefore, you have a " + str(avg) + "%. Great Job!")
+    time.sleep(2)
+    print("Thank you for using this service. You will recieve a quick form. Please fill it out and provide recommendations.")
+    time.sleep(4)
+    print("3")
+    time.sleep(1)
+    print("2")
+    time.sleep(1)
+    print("1")
+    time.sleep(1)
+    print("0")
+    time.sleep(1)
+
 
 
 
@@ -77,7 +74,7 @@ def grader(h,question):
 def graders():
     counter=0
     for assignment in assignments:
-        
+
         if counter < random.randint(4,7):
             assign=assignments[assignment]
             temp=grader(assign, 1)
@@ -89,24 +86,14 @@ def graders():
             assignments[assignment]=temp
             counter=0
     print(assignments)
-
-    
         
 
-
-        
-
-
-# def veryusefulthing():
+def veryusefulthing():
+    webbrowser.open("https://www.youtube.com/watch?v=dQw4w9WgXcQ", new=0)
 
 
 
-
-
-
-# setup()
+setup()
 graders()
 averageit()
-# veryusefulthing()
-# returner()
-
+veryusefulthing()
