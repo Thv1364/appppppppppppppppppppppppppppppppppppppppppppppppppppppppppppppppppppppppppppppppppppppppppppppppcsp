@@ -15,38 +15,98 @@
 #Nope      Variable changing with lists
 #Nope      Call function
 
+
+import random
+
+
 assignments={
-    "a":[0,10]
+"a": [1,11],   
+"b": [1,21],   
+"c": [1,31], 
+"d": [1,11],  
+"e": [1,21], 
+"f": [1,31],   
+"g": [1,11],   
+"h": [1,21],   
+"i": [1,31],   
+"j": [1,11],
+"k": [1,11],      
+"l": [1,11],      
+"m": [1,11],      
+"n": [1,11],            
     }
 
 total_amount = int(input("How many total assigments (including tests) would you like to \"grade\"? \n"))
-current_graded=0
+
 
 
 
 def add_assignment(assignment, done, outof):
-    if done=="yes":
-        done=1
-    else:
-        done=0
     assignments[assignment]=[done,outof]
 
 
 
-# def averageit():
-#     nume=0
-#     denom=0
-#     for assignment in assignments:
-#         print("it is" + assignment)
-#         nume=intassignment[0]+int(nume)
-#         denom=assignment[1]+denom
-#     avg=nume/denom
-#     print(str(avg))
+def averageit():
+    numer=0
+    denom=0
+    for assignment in assignments:
+        assign=assignments[assignment]
+        numer=numer+assign[0]
+        denom=denom+assign[1]
+    print("You have " +str(numer) + " points out of " + str(denom) + " points. \n")
+    avg=numer*100/denom
+    print("Therefore, you have a " + str(avg) + "%. Great Job!")
 
+
+
+
+def setup():
+    current_graded=0
+    while current_graded<total_amount:
+        print("\n")
+        add_assignment(input("What is the assignment named? You have added " + str(current_graded) + " assignment(s) so far. \n"),input("Was the assignment submitted? Type 1 for yes or 0 for no. \n"),int(input("How many points was the assignment worth? \n")))
+        current_graded=current_graded+1
+
+def grader(h,question):
+    if question==1:
+        h[0]=int(h[0])*int(h[1])
+    else:
+        h[0]=int(h[0])*int(h[1])*0.9
+    return(h)
+
+def graders():
+    counter=0
+    for assignment in assignments:
+        
+        if counter < random.randint(4,7):
+            assign=assignments[assignment]
+            temp=grader(assign, 1)
+            assignments[assignment]=temp
+            counter=counter+1
+        else:
+            assign=assignments[assignment]
+            temp=grader(assign, 0)
+            assignments[assignment]=temp
+            counter=0
+    print(assignments)
+
+    
+        
+
+
+        
+
+
+# def veryusefulthing():
+
+
+
+
+
+
+# setup()
+graders()
 averageit()
-
-while current_graded<total_amount:
-    add_assignment(input("What is the assignment named?"),input("Was the assignment submitted? Type yes or no."),int(input("Out of how many points?")))
-    current_graded=current_graded+1
-
+# veryusefulthing()
+# returner()
 
