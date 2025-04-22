@@ -53,21 +53,21 @@ def grader(h,question):
         h[0]=int(h[0])*int(h[1])*0.9
     return(h)
 
-def graders():
+def graders(assig):
     counter=0
-    for assignment in assignments:
+    for assignment in assig:
 
         if counter < random.randint(4,7):
-            assign=assignments[assignment]
+            assign=assig[assignment]
             temp=grader(assign, 1)
-            assignments[assignment]=temp
+            assig[assignment]=temp
             counter=counter+1
         else:
-            assign=assignments[assignment]
+            assign=assig[assignment]
             temp=grader(assign, 0)
-            assignments[assignment]=temp
+            assig[assignment]=temp
             counter=0
-    print(assignments)
+    print(assig)
         
 
 def veryusefulthing():
@@ -76,6 +76,6 @@ def veryusefulthing():
 
 
 setup()
-graders()
+graders(assignments)
 averageit()
 veryusefulthing()
