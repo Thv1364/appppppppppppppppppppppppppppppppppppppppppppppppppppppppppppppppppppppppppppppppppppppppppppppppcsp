@@ -1,21 +1,3 @@
-#!!!!!!!DELETE LATER!!!!!!!!!
-#!!!!!!!DELETE LATER!!!!!!!!!
-#!!!!!!!DELETE LATER!!!!!!!!!
-#!!!!!!!DELETE LATER!!!!!!!!!
-#!!!!!!!DELETE LATER!!!!!!!!!
-
-#Complete? Need:
-
-#Nope      Input with instructions
-#Nope      List
-#Nope      Function
-#Nope      Parameter to function
-#Nope      Loops
-#Nope      If
-#Nope      Variable changing with lists
-#Nope      Call function
-
-
 import random
 import time
 import webbrowser
