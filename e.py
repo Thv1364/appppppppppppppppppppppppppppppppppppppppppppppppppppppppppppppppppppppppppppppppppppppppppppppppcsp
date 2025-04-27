@@ -68,14 +68,14 @@ def graders(assig):
             assig[assignment]=temp
             counter=0
     print(assig)
+    return assig
         
 
 def veryusefulthing():
     webbrowser.open("https://www.youtube.com/watch?v=dQw4w9WgXcQ", new=0)
 
 
-
 setup()
-graders(assignments)
+assignments=graders(assignments)
 averageit()
 veryusefulthing()
