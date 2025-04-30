@@ -23,19 +23,6 @@ def averageit():
     print("You have " +str(numer) + " points out of " + str(denom) + " points. \n")
     avg=numer*100/denom
     print("Therefore, you have a " + str(avg) + "%. Great Job!")
-    time.sleep(2)
-    print("Thank you for using this service. You will recieve a quick form. Please fill it out and provide recommendations.")
-    time.sleep(4)
-    print("3")
-    time.sleep(1)
-    print("2")
-    time.sleep(1)
-    print("1")
-    time.sleep(1)
-    print("0")
-    time.sleep(1)
-
-
 
 
 
